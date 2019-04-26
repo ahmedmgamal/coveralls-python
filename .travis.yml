@@ -6,14 +6,6 @@ env:
   - $COVPYYAML=cov3-default,coveralls3
   - $COVPYYAML=cov4-pyyaml,coveralls4
   - $COVPYYAML=cov41-pyyaml,coveralls41
-matrix:
-  include:
-    - python: 3.6
-      env: $COVPYYAML=cov41-pyyaml,coveralls41
-    - python: 3.7
-      dist: xenial  # https://github.com/travis-ci/travis-ci/issues/9815
-      sudo: true
-      env: $COVPYYAML=cov41-pyyaml,coveralls41
 install:
   - pip install tox
 script:
